@@ -1,33 +1,981 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Niseko 2027｜二世谷雪旅規劃書</title>
-  <style>
-    :root{--bg:#f4f7fb;--card:#fff;--ink:#162033;--muted:#687387;--line:#d8e0ec;--navy:#17324d;--blue:#4b8fcb;--ice:#dff1ff;--snow:#f8fbff;--gold:#d6a84f;--green:#4f8a72;--red:#c85d5d}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;background:linear-gradient(180deg,#eaf4ff 0,#f6f8fb 38%,#f4f7fb 100%);color:var(--ink);line-height:1.72}.hero{min-height:520px;padding:72px 20px 58px;color:#fff;background:linear-gradient(135deg,rgba(12,30,52,.96),rgba(48,111,157,.9)),url('https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1800&q=80') center/cover}.hero-inner,.wrap{max-width:1120px;margin:auto}.eyebrow{letter-spacing:.18em;font-size:14px;opacity:.88}.hero h1{font-size:clamp(42px,8vw,86px);line-height:.98;margin:14px 0 18px}.hero p{font-size:clamp(17px,2.4vw,24px);max-width:900px;margin:0 0 26px}.pillbar{display:flex;flex-wrap:wrap;gap:10px}.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);font-weight:700}.nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav-inner{max-width:1120px;margin:auto;display:flex;gap:12px;overflow:auto;padding:10px 18px}.nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:800;padding:8px 12px;border-radius:999px}.nav a:hover{background:var(--ice)}.wrap{padding:34px 18px 72px}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-74px}.box,.card,.day,.note,.room,.car,.cost{background:rgba(255,255,255,.95);box-shadow:0 16px 38px rgba(32,56,89,.09);border:1px solid rgba(216,224,236,.8)}.box{border-radius:22px;padding:20px}.box b{display:block;color:var(--muted);font-size:13px}.box span{display:block;font-size:20px;font-weight:900;margin-top:3px}.section-title{font-size:32px;margin:52px 0 18px}.grid{display:grid;gap:16px}.two{grid-template-columns:1.1fr .9fr}.three{grid-template-columns:repeat(3,1fr)}.card,.note,.room,.car,.cost{border-radius:24px;padding:22px}.card h3,.note h3,.room h3,.car h3,.cost h3{margin:0 0 10px}.muted{color:var(--muted)}.day{border-radius:28px;overflow:hidden;margin:18px 0}.day-head{display:flex;gap:18px;align-items:center;padding:24px;background:linear-gradient(90deg,#dff1ff,#f8fbff)}.date{width:84px;height:84px;border-radius:24px;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;flex:0 0 auto}.date strong{font-size:30px;line-height:1}.date span{font-size:12px;margin-top:5px;letter-spacing:.08em}.day-head h2{margin:0;font-size:25px}.day-head p{margin:4px 0 0;color:var(--muted)}.day-body{padding:24px}.timeline{display:grid;grid-template-columns:120px 1fr;gap:12px 18px}.time{font-weight:900;color:var(--blue)}.event{padding-bottom:15px;border-bottom:1px dashed var(--line)}.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--ice);color:#245a7c;font-size:13px;font-weight:900;margin-left:6px}.tag.gold{background:#fff0c9;color:#876120}.tag.green{background:#e1f2eb;color:#336c57}.status{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.status .card{padding:18px}.ok{color:var(--green);font-weight:900}.wait{color:var(--red);font-weight:900}.people{columns:3;column-gap:28px}.people span{display:block;break-inside:avoid;margin-bottom:4px}.table{width:100%;border-collapse:collapse}.table th,.table td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}.table th{font-size:13px;color:var(--muted)}.cost strong{font-size:24px}.warn{border-left:5px solid var(--gold);background:#fffaf0}.footer{text-align:center;color:var(--muted);font-size:13px;padding:20px 0 0}@media(max-width:840px){.summary,.three,.two,.status{grid-template-columns:1fr}.people{columns:1}.timeline{grid-template-columns:86px 1fr}.hero{min-height:auto}.day-head{align-items:flex-start}.date{width:72px;height:72px}.nav-inner{padding:8px 12px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="北海道二世古滑雪行程 2027/1/9–1/17（Grant）。員工票 standby，航班未定，友人租車 4WD。">
+<title>北海道二世古滑雪行程 2027/1/9–1/17</title>
+<link rel="canonical" href="https://grantliang.github.io/niseko-26-27/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316362f'/%3E%3Cpath d='M16 5v22M9 11l7 5 7-5M7 19l9 4 9-4' stroke='%23f4efe6' stroke-width='1.7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #e7e1d6;
+  --paper: #f7f3eb;
+  --ink: #1c2430;
+  --muted: #4e5862;
+  --pine: #16362f;
+  --pine-2: #1f4c43;
+  --ice: #d9e6ee;
+  --line: #e3dacb;
+  --seal: #9d342c;
+  --card: #fffdf8;
+  --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% -10%, rgba(255,255,255,.7), transparent 42%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.75;
+}
+a { color: var(--pine-2); }
+img { max-width: 100%; }
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+  background: #fff;
+  padding: 8px 12px;
+  z-index: 30;
+}
+.skip:focus { top: 12px; }
+.hero {
+  background:
+    radial-gradient(circle at 80% 0%, rgba(255,255,255,.08), transparent 36%),
+    linear-gradient(165deg, #1c4a40 0%, #122e29 58%, #0e2420 100%);
+  color: #f6f1e8;
+  box-shadow: inset 0 -7px 0 #9d342c;
+}
+.hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: .18em;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: .8;
+}
+h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(36px, 7vw, 64px);
+  line-height: 1.15;
+  letter-spacing: .02em;
+}
+.range {
+  margin: 14px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(20px, 3vw, 28px);
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.facts li {
+  border: 1px solid rgba(246,241,232,.35);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.hanko {
+  width: 96px;
+  height: 96px;
+  flex: none;
+  margin-top: 8px;
+  border: 2px solid #e7b2a8;
+  color: #f0c2ba;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(8deg);
+  font-family: var(--serif);
+  line-height: 1.2;
+}
+.hanko strong { font-size: 20px; letter-spacing: .14em; font-weight: 700; }
+.hanko span { font-size: 12px; letter-spacing: .08em; }
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247,243,235,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px 16px;
+}
+.nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.nav a[aria-current="true"] { background: var(--pine); color: #f6f1e8; }
+main { max-width: 980px; margin: 0 auto; padding: 8px 20px 72px; }
+section[id] { scroll-margin-top: 72px; }
+.block { padding: 28px 0 8px; }
+h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 36px);
+  line-height: 1.25;
+}
+h3 { margin: 0 0 6px; font-size: 20px; line-height: 1.4; }
+p { margin: 0 0 12px; }
+.lead { color: var(--muted); font-size: 16px; }
+.agenda { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.agenda a {
+  display: grid;
+  grid-template-columns: 72px 52px 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 14px;
+  min-height: 52px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+}
+.agenda li:last-child a { border-bottom: 0; }
+.agenda a:hover { background: #f3eee4; }
+.agenda .d { font-family: var(--serif); font-weight: 700; font-size: 20px; color: var(--pine); }
+.agenda .w { color: var(--muted); font-size: 14px; }
+.dayhead { display: flex; gap: 16px; align-items: flex-end; margin-bottom: 8px; }
+.datenum {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(42px, 8vw, 64px);
+  line-height: .85;
+  color: var(--pine);
+  min-width: 2.2em;
+}
+.dow { margin: 0; color: var(--seal); font-weight: 700; letter-spacing: .08em; font-size: 14px; }
+.day + .day, .block + .day, .day + .block { border-top: 1px solid #ddd4c6; }
+.spots { display: grid; gap: 12px; margin: 14px 0; }
+@media (min-width: 760px) {
+  .spots.two { grid-template-columns: 1fr 1fr; }
+}
+.spot {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.spot p:last-child { margin-bottom: 0; }
+.en { color: var(--muted); font-size: 15px; }
+.flag { margin: 0; color: var(--seal); font-weight: 700; letter-spacing: .04em; font-size: 14px; }
+.flag.shut { color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.map, .textlink, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+.map { background: var(--pine); color: #f6f1e8; }
+.map:hover { background: var(--pine-2); }
+.day > .actions { margin: 4px 0 8px; }
+.textlink, .btn { background: var(--ice); color: var(--pine); }
+.callout {
+  background: #f8efe4;
+  border: 1px solid #ead8c4;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin: 12px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+.tablewrap { overflow-x: auto; margin: 12px 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+table { width: 100%; border-collapse: collapse; }
+caption { caption-side: top; text-align: left; font-weight: 700; padding: 12px 14px 0; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 13px; color: var(--muted); font-weight: 700; }
+.shop-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: center; }
+.meter {
+  height: 8px;
+  background: #e5dfd4;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 8px 0 14px;
+}
+.meter span { display: block; height: 100%; width: 0; background: var(--pine); }
+.shop { display: grid; gap: 12px; }
+@media (min-width: 800px) { .shop { grid-template-columns: 1fr 1fr; } }
+.shop fieldset {
+  margin: 0;
+  padding: 8px 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+}
+.shop legend {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--pine);
+  padding: 0 6px;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 6px 2px;
+  border-bottom: 1px solid var(--line);
+}
+fieldset .check:last-child { border-bottom: 0; }
+.check input { width: 20px; height: 20px; accent-color: var(--pine); flex: none; }
+.check.done span { color: var(--muted); text-decoration: line-through; }
+.recipe { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; margin: 12px 0; }
+.recipe h3 { font-family: var(--serif); }
+.footer { color: var(--muted); font-size: 14px; padding-top: 28px; }
+:focus-visible { outline: 3px solid var(--pine); outline-offset: 3px; }
+@media (max-width: 560px) {
+  .hero-inner { flex-direction: column; }
+  .hanko { width: 76px; height: 76px; }
+  .agenda a { grid-template-columns: 58px 44px 1fr; padding: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .nav, .skip, .hanko, .actions, .btn { display: none !important; }
+  body { background: #fff; }
+  .hero { box-shadow: none; color: #000; background: #fff; }
+}
+</style>
 </head>
 <body>
-  <section class="hero"><div class="hero-inner"><div class="eyebrow">NISEKO SNOW TRIP · 2027</div><h1>二世谷雪旅規劃書</h1><p>2027/1/9（六）– 1/17（日）｜札幌集合、Niseko White Villa II Annupuri 雪場基地、Annupuri 夜滑、六車分組、24 人一起出發。</p><div class="pillbar"><span class="pill">🏔️ Niseko Annupuri</span><span class="pill">👥 24 人</span><span class="pill">🚗 6 車</span><span class="pill">🏠 White Villa II</span><span class="pill">⛷️ Ski / Snowboard</span></div></div></section>
-  <nav class="nav"><div class="nav-inner"><a href="#overview">總覽</a><a href="#schedule">行程</a><a href="#stay">住宿</a><a href="#cars">車車</a><a href="#cost">費用</a><a href="#todo">待辦</a></div></nav>
-  <main class="wrap">
-    <section id="overview" class="summary"><div class="box"><b>日期</b><span>1/9–1/17</span></div><div class="box"><b>人數</b><span>24 人</span></div><div class="box"><b>雪場住宿</b><span>1/11–1/16</span></div><div class="box"><b>主基地</b><span>Annupuri</span></div></section>
-    <h2 class="section-title">旅行重點</h2><section class="grid three"><div class="card"><h3>✈️ 進出</h3><p>主要成員 1/9 搭 IT234 抵達新千歲，1/17 搭 IT235 回台。部分成員 1/10 抵達，回程含 CI131、TR893、FD243 等不同班機。</p></div><div class="card"><h3>🏠 住宿</h3><p>1/9–1/10 多數住札幌，1/11–1/16 集中住 Niseko White Villa II Annupuri，1/16 check-out 後回札幌。</p></div><div class="card"><h3>🚗 交通</h3><p>目前規劃 6 車分組。提醒所有會開車的人都要帶「日文譯本」與「台灣駕照」。</p></div></section>
-    <h2 id="schedule" class="section-title">行程安排</h2>
-    <article class="day"><div class="day-head"><div class="date"><strong>09</strong><span>JAN · SAT</span></div><div><h2>台灣 → 新千歲 → 札幌</h2><p>多數人抵達札幌，先住市區。</p></div></div><div class="day-body"><div class="timeline"><div class="time">06:20–10:55</div><div class="event"><b>IT234 抵達新千歲</b><br>主要班機。另有 FD242 07:25–12:00。</div><div class="time">下午</div><div class="event"><b>前往札幌飯店</b><br>住宿包含 Holiday Inn Express Sapporo、Holiday Inn 札幌大通公園、VESSEL HOTEL CAMPANA SUSUKINO 等。</div><div class="time">晚上</div><div class="event"><b>札幌自由活動</b><br>吃飯、採買、防寒裝備檢查。</div></div></div></article>
-    <article class="day"><div class="day-head"><div class="date"><strong>10</strong><span>JAN · SUN</span></div><div><h2>札幌集合日</h2><p>第二批成員抵達，補齊住宿與交通資訊。</p></div></div><div class="day-body"><div class="timeline"><div class="time">上午</div><div class="event"><b>第二批抵達</b><br>GK153 09:50–11:50、CI130 13:20 landed。</div><div class="time">下午</div><div class="event"><b>札幌市區整備</b><br>確認雪具、租車、隔天路線與採買清單。</div><div class="time">晚上</div><div class="event"><b>札幌最後一晚</b><br>隔天往小樽、余市、俱知安、Annupuri 移動。</div></div></div></article>
-    <article class="day"><div class="day-head"><div class="date"><strong>11</strong><span>JAN · MON</span></div><div><h2>札幌 Check-out → 小樽 → 余市 → Niseko</h2><p>正式進雪場基地，晚上可安排 Annupuri 夜滑。</p></div></div><div class="day-body"><div class="timeline"><div class="time">上午</div><div class="event"><b>札幌 Check-out</b><br>整理行李、上車、確認板袋與乘車分配。</div><div class="time">中午前後</div><div class="event"><b>小樽 → 余市</b> <span class="tag gold">沿路玩</span><br>可依天氣與路況調整停留時間。</div><div class="time">下午</div><div class="event"><b>俱知安超市 → 租板子</b><br>進 Villa 前完成補給與租借。</div><div class="time">15:00–17:00</div><div class="event"><b>Check-in：Niseko White Villa II Annupuri</b></div><div class="time">晚上</div><div class="event"><b>Annupuri 夜滑</b> <span class="tag">第一滑</span><br>視大家狀態與天候決定。</div></div></div></article>
-    <article class="day"><div class="day-head"><div class="date"><strong>12–15</strong><span>JAN</span></div><div><h2>Niseko 滑雪主行程</h2><p>以 Annupuri 為基地，白天滑雪，晚上彈性休息。</p></div></div><div class="day-body"><div class="timeline"><div class="time">白天</div><div class="event"><b>滑雪 / Snowboard</b><br>雪票、雪具、分組教學與自由滑行依大家程度安排。</div><div class="time">傍晚</div><div class="event"><b>回 Villa 休息</b><br>洗澡、煮飯、泡湯或外食。</div><div class="time">夜間</div><div class="event"><b>夜滑 / 彈性活動</b><br>Annupuri 夜滑可依體力與雪況穿插。</div></div></div></article>
-    <article class="day"><div class="day-head"><div class="date"><strong>16</strong><span>JAN · SAT</span></div><div><h2>Villa Check-out → 回札幌</h2><p>可把小樽 / 余市改到這天做彈性備案。</p></div></div><div class="day-body"><div class="timeline"><div class="time">上午</div><div class="event"><b>起床、整理、Villa Check-out</b></div><div class="time">白天</div><div class="event"><b>回札幌</b><br>如果 1/11 太趕，小樽 / 余市可改排今天。</div><div class="time">晚上</div><div class="event"><b>札幌住宿</b><br>多數成員住札幌，隔天依班機回台。</div></div></div></article>
-    <article class="day"><div class="day-head"><div class="date"><strong>17</strong><span>JAN · SUN</span></div><div><h2>札幌 → 新千歲 → 回台</h2><p>不同班機分流返台。</p></div></div><div class="day-body"><div class="timeline"><div class="time">11:55–15:35</div><div class="event"><b>IT235 主回程班機</b></div><div class="time">14:00–17:55</div><div class="event"><b>FD243</b></div><div class="time">18:40–22:20</div><div class="event"><b>TR893</b></div></div></div></article>
-    <h2 id="stay" class="section-title">住宿與房間</h2><section class="grid two"><div class="room"><h3>🏠 Niseko White Villa II Annupuri</h3><p>入住：1/11–1/16。房間目前分為 Grant、Harry、Andy、Mona 四組版本，主要配置為 4 間房、每組約 6 人。</p><p class="muted">房型筆記：臥室 1–3 各 1 張單人床 + 1 張雙人床；客廳 1 張沙發床；浴室 4 間。</p></div><div class="room warn"><h3>⚠️ 取消期限</h3><p><b>2026/11/11 前可全額退。</b></p><p>建議在 2026/10 底前完成最終人數、房間與費用確認。</p></div></section>
-    <table class="table" style="margin-top:16px;background:#fff;border-radius:20px;overflow:hidden;display:table"><thead><tr><th>Room 1</th><th>Room 2</th><th>Room 3</th><th>Room 4</th></tr></thead><tbody><tr><td>Grant / Stacy / Eilis / Eilis-B / Ivy / Mona</td><td>Harry / Chris / Lucas / Tina / Kitty / James</td><td>達達 / 大衛 / 豬大哥 / 培根 / 環境股長 / Andy</td><td>Leon / Darren / George / Anita / 久久 / 蛋塔</td></tr></tbody></table>
-    <h2 id="cars" class="section-title">車車分配</h2><section class="note warn"><h3>🚨 駕駛提醒</h3><p>有開車的人都需要帶著 <b>日文譯本</b> 跟 <b>台灣駕照</b>。出發前請再次確認護照、駕照、譯本、信用卡。</p></section><section class="grid three" style="margin-top:16px"><div class="car"><h3>第一車</h3><p>蛋塔、久久、Grant、Mona</p><p class="muted">行李/板袋/Cardo：表內已標註。</p></div><div class="car"><h3>第二車</h3><p>Eilis、Tim、Stacy、Ivy</p><p class="muted">含板袋與 Cardo 標記。</p></div><div class="car"><h3>第三車</h3><p>Lucas、Tina、Kitty、James</p><p class="muted">目前欄位待補較多。</p></div><div class="car"><h3>第四車</h3><p>達達、大衛、豬大哥、培根</p></div><div class="car"><h3>第五車</h3><p>Harry、George、Anita、Chris</p></div><div class="car"><h3>第六車</h3><p>Andy、環境股長、Leon、Darren</p></div></section>
-    <h2 id="cost" class="section-title">粗估費用</h2><section class="grid three"><div class="cost"><h3>🚗 車</h3><strong>NT$5,000</strong><p class="muted">每人粗估</p></div><div class="cost"><h3>🏠 房</h3><strong>NT$26,667</strong><p class="muted">每人粗估</p></div><div class="cost"><h3>✈️ 機票</h3><strong>NT$20,000</strong><p class="muted">每人粗估</p></div><div class="cost"><h3>🎿 雪票白天</h3><strong>NT$11,735</strong><p class="muted">每人粗估</p></div><div class="cost"><h3>🌙 夜滑 A x1</h3><strong>NT$631</strong><p class="muted">每人粗估</p></div><div class="cost"><h3>🌙 夜滑 H x1</h3><strong>NT$1,267</strong><p class="muted">每人粗估</p></div></section>
-    <h2 id="todo" class="section-title">待辦清單</h2><section class="status"><div class="card"><h3>已完成</h3><p class="ok">多數機票已完成</p><p class="muted">仍有部分成員顯示尚未開始。</p></div><div class="card"><h3>尚未開始</h3><p class="wait">雪場訂房、雪票</p><p class="muted">建議建立統一 deadline。</p></div><div class="card"><h3>建議補齊</h3><p>租車正式訂單、雪具租借、每日晚餐、採買清單、緊急聯絡、保險。</p></div></section>
-    <h2 class="section-title">成員名單</h2><section class="card people"><span>Grant</span><span>Stacy</span><span>Ivy</span><span>Harry</span><span>Chris</span><span>Lucas</span><span>Tina</span><span>Kitty</span><span>James</span><span>Mona</span><span>Leon</span><span>Darren</span><span>Andy</span><span>George</span><span>Anita</span><span>Eilis</span><span>蛋塔</span><span>久久</span><span>達達</span><span>大衛</span><span>豬大哥</span><span>培根</span><span>環境股長</span><span>Tim</span></section>
-    <p class="footer">Last updated from the shared planning sheet · Niseko 2027</p>
-  </main>
+<a class="skip" href="#overview">跳到行程</a>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">HOKKAIDO · GRANT</p>
+      <h1>北海道二世古<br>滑雪行程</h1>
+      <p class="range"><time datetime="2027-01-09">2027/1/9</time> – <time datetime="2027-01-17">1/17</time></p>
+      <ul class="facts">
+        <li>員工票（standby）</li>
+        <li>航班未定</li>
+        <li>友人租車（4WD）</li>
+      </ul>
+    </div>
+    <p class="hanko" aria-hidden="true"><strong>二世古</strong><span>2027</span></p>
+  </div>
+</header>
+<nav class="nav" aria-label="頁面章節">
+  <div class="nav-inner">
+    <a href="#overview">總覽</a>
+    <a href="#d09">1/9</a>
+    <a href="#d10">1/10</a>
+    <a href="#d11">1/11</a>
+    <a href="#ski">滑雪</a>
+    <a href="#d12">1/12</a>
+    <a href="#d13">1/13</a>
+    <a href="#d14">1/14</a>
+    <a href="#d15">1/15</a>
+    <a href="#d16">1/16</a>
+    <a href="#d17">1/17</a>
+    <a href="#bars">十四代</a>
+    <a href="#dining">餐廳</a>
+    <a href="#recipes">食譜</a>
+    <a href="#yoichi">余市</a>
+  </div>
+</nav>
+<main>
+  <section class="block" id="overview">
+    <h2>九日一覽</h2>
+    <p class="lead">1/10 是週日。和酒専門＠BAR 週日晚上營業；みずとり週日休。</p>
+    <ol class="agenda">
+      <li><a href="#d09"><span class="d">1/9</span><span class="w">週六</span><span>機動轉機。方案 A 直飛 CTS，或經 NRT／HND／KIX。</span></a></li>
+      <li><a href="#d10"><span class="d">1/10</span><span class="w">週日</span><span>住札幌薄野全日空假日酒店。晚上找十四代。</span></a></li>
+      <li><a href="#d11"><span class="d">1/11</span><span class="w">週一</span><span>國道230 開往 Annupuri。俱知安採買，入住別墅。</span></a></li>
+      <li><a href="#d12"><span class="d">1/12</span><span class="w">週二</span><span>Annupuri + Village。</span></a></li>
+      <li><a href="#d13"><span class="d">1/13</span><span class="w">週三</span><span>Annupuri + Village。</span></a></li>
+      <li><a href="#d14"><span class="d">1/14</span><span class="w">週四</span><span>Hirafu + Hanazono。晚餐在 Hirafu。</span></a></li>
+      <li><a href="#d15"><span class="d">1/15</span><span class="w">週五</span><span>雪況最佳區，加夜滑。</span></a></li>
+      <li><a href="#d16"><span class="d">1/16</span><span class="w">週六</span><span>10:00 前退房。余市、小樽，晚上住札幌薄野。</span></a></li>
+      <li><a href="#d17"><span class="d">1/17</span><span class="w">週日</span><span>札幌到 CTS，回台。</span></a></li>
+    </ol>
+  </section>
+
+  <section class="day block" id="d09">
+    <header class="dayhead">
+      <p class="datenum">1/9</p>
+      <div>
+        <p class="dow">週六</p>
+        <h2>機動轉機</h2>
+      </div>
+    </header>
+    <p>員工票（standby），航班未定。友人租車（4WD）。</p>
+    <div class="callout">
+      <p><strong>方案 A：</strong>TPE → CTS 直飛。</p>
+      <p><strong>方案 B：</strong>TPE → NRT／HND／KIX，再轉國內線到 CTS。HND–CTS 班次最多，最好候補。JAL、ANA、Skymark、Peach、Jetstar。LCC 托運雪板另收費。</p>
+      <p>卡在東京則住羽田（蒲田／品川）或成田機場周邊。</p>
+    </div>
+    <div class="spots two">
+      <article class="spot">
+        <h3>TPE 臺灣桃園國際機場</h3>
+        <p>出發機場。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=TPE%20%E8%87%BA%E7%81%A3%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="TPE 臺灣桃園國際機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>CTS 新千歲機場</h3>
+        <p>方案 A 的落地機場，也是方案 B 國內線的終點。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=CTS%20%E6%96%B0%E5%8D%83%E6%AD%B2%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="CTS 新千歲機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>HND 東京羽田機場</h3>
+        <p>方案 B 轉機點。HND–CTS 班次最多，最好候補。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=HND%20%E6%9D%B1%E4%BA%AC%E7%BE%BD%E7%94%B0%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="HND 東京羽田機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>NRT 成田國際機場</h3>
+        <p>方案 B 轉機點。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=NRT%20%E6%88%90%E7%94%B0%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="NRT 成田國際機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>KIX 關西國際機場</h3>
+        <p>方案 B 轉機點。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=KIX%20%E9%97%9C%E8%A5%BF%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="KIX 關西國際機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>蒲田</h3>
+        <p>若卡在東京、住羽田周邊，可考慮蒲田。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%92%B2%E7%94%B0%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="蒲田的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>品川</h3>
+        <p>若卡在東京、住羽田周邊，可考慮品川。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%93%81%E5%B7%9D%20%E6%9D%B1%E4%BA%AC" target="_blank" rel="noopener noreferrer" aria-label="品川的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>成田機場周邊</h3>
+        <p>卡在東京時的另一個住宿範圍。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E6%A9%9F%E5%A0%B4%E5%91%A8%E9%82%8A" target="_blank" rel="noopener noreferrer" aria-label="成田機場周邊的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="day block" id="d10">
+    <header class="dayhead">
+      <p class="datenum">1/10</p>
+      <div>
+        <p class="dow">週日</p>
+        <h2>札幌薄野</h2>
+      </div>
+    </header>
+    <p>住札幌薄野全日空假日酒店。晚上找十四代；庫存每日不同，先電話問。席料、酒單與訂位細節在 <a href="#bars">十四代酒吧</a>。</p>
+    <div class="spots">
+      <article class="spot">
+        <h3>札幌薄野全日空假日酒店</h3>
+        <p class="en">ANA Holiday Inn Sapporo Susukino</p>
+        <p>中央區南3条西5丁目。1/10 住宿。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C%E8%96%84%E9%87%8E%E5%85%A8%E6%97%A5%E7%A9%BA%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97%20ANA%20Holiday%20Inn%20Sapporo%20Susukino%20%E4%B8%AD%E5%A4%AE%E5%8D%80%E5%8D%973%E6%9D%A1%E8%A5%BF5%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener noreferrer" aria-label="札幌薄野全日空假日酒店的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+    <div class="spots two">
+      <article class="spot">
+        <p class="flag">1/10 最推</p>
+        <h3>和酒専門＠BAR</h3>
+        <p>南7条西4丁目 LC拾壱番館1F。步行約 10 分。週日 19:00–打烊。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%92%8C%E9%85%92%E5%B0%82%E9%96%80%EF%BC%A0BAR%20%E6%9C%AD%E5%B9%8C%20%E5%8D%977%E6%9D%A1%E8%A5%BF4%E4%B8%81%E7%9B%AE%20LC%E6%8B%BE%E5%A3%B1%E7%95%AA%E9%A4%A81F" target="_blank" rel="noopener noreferrer" aria-label="和酒専門＠BAR的 Google 地圖">地圖</a><a class="textlink" href="tel:011-552-8989">011-552-8989</a><a class="textlink" href="#bars">詳情</a></div>
+      </article>
+      <article class="spot">
+        <p class="flag shut">1/10 不開</p>
+        <h3>日本酒 みずとり</h3>
+        <p>南3条西3丁目 プレイタウンふじ井ビル5F。步行 4–5 分。週日休。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%9C%AC%E9%85%92%20%E3%81%BF%E3%81%9A%E3%81%A8%E3%82%8A%20%E6%9C%AD%E5%B9%8C%20%E5%8D%973%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE%20%E3%83%97%E3%83%AC%E3%82%A4%E3%82%BF%E3%82%A6%E3%83%B3%E3%81%B5%E3%81%98%E4%BA%95%E3%83%93%E3%83%AB5F" target="_blank" rel="noopener noreferrer" aria-label="日本酒 みずとり的 Google 地圖">地圖</a><a class="textlink" href="tel:050-5589-6975">050-5589-6975</a><a class="textlink" href="#bars">詳情</a></div>
+      </article>
+      <article class="spot">
+        <p class="flag">備案</p>
+        <h3>日本酒バー にゃごりん</h3>
+        <p>南4条西3丁目 第2グリーンビル6F。週日 18:00–22:00。未確認有十四代。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%9C%AC%E9%85%92%E3%83%90%E3%83%BC%20%E3%81%AB%E3%82%83%E3%81%94%E3%82%8A%E3%82%93%20%E6%9C%AD%E5%B9%8C%20%E5%8D%974%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE%20%E7%AC%AC2%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%93%E3%83%AB6F" target="_blank" rel="noopener noreferrer" aria-label="日本酒バー にゃごりん的 Google 地圖">地圖</a><a class="textlink" href="tel:011-513-5299">011-513-5299</a><a class="textlink" href="#bars">詳情</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="day block" id="d11">
+    <header class="dayhead">
+      <p class="datenum">1/11</p>
+      <div>
+        <p class="dow">週一</p>
+        <h2>札幌開車到 Annupuri</h2>
+      </div>
+    </header>
+    <p>札幌走國道230，經中山峠、喜茂別，約 105 km。冬天抓 2.5–3 小時，白天開。</p>
+    <p><a class="textlink" href="https://www.town.niseko.lg.jp/kurashi/seikatsu/kotsu/dourokisei_touki/" target="_blank" rel="noopener noreferrer">二世古町道路規制（冬季）</a></p>
+    <p>先到俱知安超市採買（MaxValu／Coop／Lucky），約 20–25 分。清單在 <a href="#shopping">三天食譜的採買清單</a>。</p>
+    <div class="spots two">
+      <article class="spot">
+        <h3>札幌</h3>
+        <p>這天的出發地。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener noreferrer" aria-label="札幌的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>國道230</h3>
+        <p>札幌到二世古的路線，經中山峠、喜茂別。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%8B%E9%81%93230%20%E5%8C%97%E6%B5%B7%E9%81%93" target="_blank" rel="noopener noreferrer" aria-label="國道230的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>中山峠</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%B1%B1%E5%B3%A0" target="_blank" rel="noopener noreferrer" aria-label="中山峠的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>喜茂別</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%96%9C%E8%8C%82%E5%88%A5" target="_blank" rel="noopener noreferrer" aria-label="喜茂別的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>俱知安</h3>
+        <p>進別墅前先在這裡的超市採買。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BF%B1%E7%9F%A5%E5%AE%89" target="_blank" rel="noopener noreferrer" aria-label="俱知安的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>MaxValu</h3>
+        <p>俱知安超市。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=MaxValu%20%E4%BF%B1%E7%9F%A5%E5%AE%89" target="_blank" rel="noopener noreferrer" aria-label="MaxValu 俱知安的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Coop</h3>
+        <p>俱知安超市。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Coop%20%E4%BF%B1%E7%9F%A5%E5%AE%89" target="_blank" rel="noopener noreferrer" aria-label="Coop 俱知安的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Lucky</h3>
+        <p>俱知安超市。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Lucky%20%E4%BF%B1%E7%9F%A5%E5%AE%89" target="_blank" rel="noopener noreferrer" aria-label="Lucky 俱知安的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+    <article class="spot">
+      <h3>Niseko White Villa II Annupuri</h3>
+      <p>〒048-1522 北海道虻田郡ニセコ町曽我476-53</p>
+      <p>住宿 1/11–1/16。入住 15:00–21:00，退房 08:00–10:00。有廚房、hot tub、免費停車。</p>
+      <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20White%20Villa%20II%20Annupuri%20%E3%80%92048-1522%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%E6%9B%BD%E6%88%91476-53" target="_blank" rel="noopener noreferrer" aria-label="Niseko White Villa II Annupuri的 Google 地圖">地圖</a></div>
+    </article>
+  </section>
+
+  <section class="block" id="ski">
+    <h2>滑雪（1/11–1/16）</h2>
+    <p>排法：1/12–13 Annupuri + Village；1/14 Hirafu + Hanazono，晚餐 Hirafu；1/15 雪況最佳區 + 夜滑；1/16 10:00 前退房。</p>
+        <div class="tablewrap">
+      <table>
+        <caption>Niseko United 全山券，旺季成人</caption>
+        <thead><tr><th>天數</th><th>價格</th></tr></thead>
+        <tbody>
+          <tr><td>1 日</td><td>¥13,500</td></tr>
+          <tr><td>3 日</td><td>¥39,500</td></tr>
+          <tr><td>4 日</td><td>¥52,500</td></tr>
+          <tr><td>5 日</td><td>¥65,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>網購約便宜 5%，不可退。IC 卡 ¥500。</p>
+    <p>Annupuri 08:30–16:30，夜滑 16:30–19:30。雪場接駁持當日券免費。末班 Annupuri → Hirafu 20:04；Hirafu → Annupuri 20:20。</p>
+    <p>停車：Annupuri 免費 800 位。Hirafu 公共停車場 23:00–08:00 禁停。</p>
+    <div class="spots two">
+      <article class="spot">
+        <h3>Annupuri</h3>
+        <p>08:30–16:30，夜滑 16:30–19:30。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Annupuri%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Annupuri的 Google 地圖">地圖</a><a class="textlink" href="https://www.niseko.ne.jp/en/map/annupuri/" target="_blank" rel="noopener noreferrer">雪場地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Niseko United</h3>
+        <p>全山券。旺季成人價格見上表。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20United%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Niseko United的 Google 地圖">地圖</a><a class="textlink" href="https://www.niseko.ne.jp/en/lift/" target="_blank" rel="noopener noreferrer">雪票</a></div>
+      </article>
+      <article class="spot">
+        <h3>Village</h3>
+        <p>1/12–13 與 Annupuri 一起滑。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20Village%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Niseko Village的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Hirafu</h3>
+        <p>1/14 與 Hanazono 一起滑，晚餐也在這裡。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hirafu%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hirafu的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Hanazono</h3>
+        <p>1/14 與 Hirafu 一起滑。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hanazono%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hanazono的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Annupuri 停車場</h3>
+        <p>免費，800 位。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Annupuri%20%E5%81%9C%E8%BB%8A%E5%A0%B4%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Annupuri 停車場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Hirafu 公共停車場</h3>
+        <p>23:00–08:00 禁停。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hirafu%20%E5%85%AC%E5%85%B1%E5%81%9C%E8%BB%8A%E5%A0%B4%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hirafu 公共停車場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>綺羅乃湯</h3>
+        <p>Hirafu。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%B6%BA%E7%BE%85%E4%B9%83%E6%B9%AF%20Hirafu%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="綺羅乃湯的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>昆布溫泉</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%86%E5%B8%83%E6%BA%AB%E6%B3%89%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="昆布溫泉的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>Village 日歸溫泉</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20Village%20%E6%97%A5%E6%AD%B8%E6%BA%AB%E6%B3%89%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Niseko Village 日歸溫泉的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="day block" id="d12">
+    <header class="dayhead">
+      <p class="datenum">1/12</p>
+      <div>
+        <p class="dow">週二</p>
+        <h2>Annupuri + Village</h2>
+      </div>
+    </header>
+    <p>滑 Annupuri 與 Village。營運時間、全山券、接駁與停車見 <a href="#ski">滑雪</a>。基地仍是 Niseko White Villa II Annupuri。</p>
+    <div class="actions">
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Annupuri%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Annupuri的 Google 地圖">Annupuri 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20Village%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Village的 Google 地圖">Village 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20White%20Villa%20II%20Annupuri%20%E3%80%92048-1522%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%E6%9B%BD%E6%88%91476-53" target="_blank" rel="noopener noreferrer" aria-label="Niseko White Villa II Annupuri的 Google 地圖">Villa 地圖</a>
+    </div>
+  </section>
+
+  <section class="day block" id="d13">
+    <header class="dayhead">
+      <p class="datenum">1/13</p>
+      <div>
+        <p class="dow">週三</p>
+        <h2>Annupuri + Village</h2>
+      </div>
+    </header>
+    <p>與 1/12 相同：Annupuri + Village。雪票與接駁見 <a href="#ski">滑雪</a>。</p>
+    <div class="actions">
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Annupuri%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Annupuri的 Google 地圖">Annupuri 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20Village%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Village的 Google 地圖">Village 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20White%20Villa%20II%20Annupuri%20%E3%80%92048-1522%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%E6%9B%BD%E6%88%91476-53" target="_blank" rel="noopener noreferrer" aria-label="Niseko White Villa II Annupuri的 Google 地圖">Villa 地圖</a>
+    </div>
+  </section>
+
+  <section class="day block" id="d14">
+    <header class="dayhead">
+      <p class="datenum">1/14</p>
+      <div>
+        <p class="dow">週四</p>
+        <h2>Hirafu + Hanazono</h2>
+      </div>
+    </header>
+    <p>滑 Hirafu 與 Hanazono。晚餐在 Hirafu。餐廳建議 1–2 週前訂，壽司更早，名單在 <a href="#dining">比羅夫餐廳</a>。</p>
+    <div class="actions">
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hirafu%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hirafu的 Google 地圖">Hirafu 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hanazono%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hanazono的 Google 地圖">Hanazono 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hirafu%20%E5%85%AC%E5%85%B1%E5%81%9C%E8%BB%8A%E5%A0%B4%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hirafu 公共停車場的 Google 地圖">Hirafu 停車場地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20White%20Villa%20II%20Annupuri%20%E3%80%92048-1522%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%E6%9B%BD%E6%88%91476-53" target="_blank" rel="noopener noreferrer" aria-label="Niseko White Villa II Annupuri的 Google 地圖">Villa 地圖</a>
+    </div>
+  </section>
+
+  <section class="day block" id="d15">
+    <header class="dayhead">
+      <p class="datenum">1/15</p>
+      <div>
+        <p class="dow">週五</p>
+        <h2>雪況最佳區 + 夜滑</h2>
+      </div>
+    </header>
+    <p>滑當天雪況最好的區域，並夜滑。Annupuri 夜滑 16:30–19:30。末班接駁 Annupuri → Hirafu 20:04，Hirafu → Annupuri 20:20。持當日券接駁免費。</p>
+    <div class="actions">
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Annupuri%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Annupuri的 Google 地圖">Annupuri 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Hirafu%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Hirafu的 Google 地圖">Hirafu 地圖</a>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20White%20Villa%20II%20Annupuri%20%E3%80%92048-1522%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%E6%9B%BD%E6%88%91476-53" target="_blank" rel="noopener noreferrer" aria-label="Niseko White Villa II Annupuri的 Google 地圖">Villa 地圖</a>
+    </div>
+  </section>
+
+  <section class="day block" id="d16">
+    <header class="dayhead">
+      <p class="datenum">1/16</p>
+      <div>
+        <p class="dow">週六</p>
+        <h2>余市、小樽，回札幌</h2>
+      </div>
+    </header>
+    <p>10:00 前退房（別墅退房時段 08:00–10:00）。之後余市蒸餾所 → 小樽 → 晚上住札幌（薄野）。蒸餾所完整規定在 <a href="#yoichi">余市蒸餾所</a>。</p>
+    <div class="callout">
+      <p>余市蒸餾所 1/16 有開，9:15–16:15（無預約最後入場 15:30）。12–1 月整修期間只開付費「キーモルトセミナー」（¥3,000 現金，約 90 分，駕駛不能參加），可能沒有免費導覽。駕駛不能試飲。不預約也可進博物館、試飲吧、商店、RITA's KITCHEN（10:00–15:50）。</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>路段</th><th>估計</th></tr></thead>
+        <tbody>
+          <tr><td>Annupuri → 余市</td><td>1 小時 15 分–1 小時 30 分</td></tr>
+          <tr><td>余市 → 小樽</td><td>30 分</td></tr>
+          <tr><td>小樽 → 札幌</td><td>40 分</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>小樽逛運河、堺町通。晚上住札幌（薄野）。備案：定山溪溫泉住一晚。</p>
+    <div class="spots two">
+      <article class="spot">
+        <h3>Niseko White Villa II Annupuri</h3>
+        <p>08:00–10:00 退房，10:00 前離開。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Niseko%20White%20Villa%20II%20Annupuri%20%E3%80%92048-1522%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E3%83%8B%E3%82%BB%E3%82%B3%E7%94%BA%E6%9B%BD%E6%88%91476-53" target="_blank" rel="noopener noreferrer" aria-label="Niseko White Villa II Annupuri的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>余市蒸餾所 Nikka</h3>
+        <p>余市町黒川町7-6。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BD%99%E5%B8%82%E8%92%B8%E9%A4%BE%E6%89%80%20Nikka%20%E4%BD%99%E5%B8%82%E7%94%BA%E9%BB%92%E5%B7%9D%E7%94%BA7-6" target="_blank" rel="noopener noreferrer" aria-label="余市蒸餾所 Nikka的 Google 地圖">地圖</a><a class="textlink" href="tel:0135-23-3131">0135-23-3131</a><a class="textlink" href="#yoichi">詳情</a></div>
+      </article>
+      <article class="spot">
+        <h3>RITA's KITCHEN</h3>
+        <p>蒸餾所內。10:00–15:50。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=RITA%27s%20KITCHEN%20%E4%BD%99%E5%B8%82%E8%92%B8%E9%A4%BE%E6%89%80%20%E4%BD%99%E5%B8%82%E7%94%BA%E9%BB%92%E5%B7%9D%E7%94%BA7-6" target="_blank" rel="noopener noreferrer" aria-label="RITA's KITCHEN的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>小樽運河</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3" target="_blank" rel="noopener noreferrer" aria-label="小樽運河的 Google 地圖">地圖</a><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD" target="_blank" rel="noopener noreferrer" aria-label="小樽的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>堺町通</h3>
+        <p>小樽。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A0%BA%E7%94%BA%E9%80%9A%20%E5%B0%8F%E6%A8%BD" target="_blank" rel="noopener noreferrer" aria-label="堺町通的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>札幌薄野</h3>
+        <p>晚上住札幌（薄野）。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C%E8%96%84%E9%87%8E" target="_blank" rel="noopener noreferrer" aria-label="札幌薄野的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>定山溪溫泉</h3>
+        <p>備案：改住一晚。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%9A%E5%B1%B1%E6%BA%AA%E6%BA%AB%E6%B3%89" target="_blank" rel="noopener noreferrer" aria-label="定山溪溫泉的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="day block" id="d17">
+    <header class="dayhead">
+      <p class="datenum">1/17</p>
+      <div>
+        <p class="dow">週日</p>
+        <h2>回台</h2>
+      </div>
+    </header>
+    <p>札幌 → CTS 約 1 小時。員工票候補。起飛前 3 小時以上還車（租車點在機場外，要搭接駁）。</p>
+    <p>CTS 沒位可改國內線到 HND／NRT／KIX，再回 TPE。</p>
+    <p>札幌雪祭在 2 月，這次碰不到。</p>
+    <div class="spots two">
+      <article class="spot">
+        <h3>札幌</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener noreferrer" aria-label="札幌的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>CTS 新千歲機場</h3>
+        <p>還車點在機場外，要搭接駁。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=CTS%20%E6%96%B0%E5%8D%83%E6%AD%B2%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="CTS 新千歲機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>HND 東京羽田機場</h3>
+        <p>CTS 沒位時的國內線備案。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=HND%20%E6%9D%B1%E4%BA%AC%E7%BE%BD%E7%94%B0%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="HND 東京羽田機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>NRT 成田國際機場</h3>
+        <p>CTS 沒位時的國內線備案。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=NRT%20%E6%88%90%E7%94%B0%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="NRT 成田國際機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>KIX 關西國際機場</h3>
+        <p>CTS 沒位時的國內線備案。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=KIX%20%E9%97%9C%E8%A5%BF%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="KIX 關西國際機場的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>TPE 臺灣桃園國際機場</h3>
+        <p>回台落地。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=TPE%20%E8%87%BA%E7%81%A3%E6%A1%83%E5%9C%92%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" aria-label="TPE 臺灣桃園國際機場的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="bars">
+    <h2>十四代酒吧</h2>
+    <p>1/10 晚上，人在札幌薄野。庫存每日不同，先電話問。1/10 是週日。</p>
+    <div class="spots">
+      <article class="spot">
+        <p class="flag">1/10 最推</p>
+        <h3>和酒専門＠BAR</h3>
+        <p>南7条西4丁目 LC拾壱番館1F。從飯店步行約 10 分。週日 19:00–打烊。</p>
+        <p>官網把十四代列為通年在庫，龍泉偶有。席料 + 小菜 ¥2,000。7 吧台席 + 2 人包廂。建議訂位。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%92%8C%E9%85%92%E5%B0%82%E9%96%80%EF%BC%A0BAR%20%E6%9C%AD%E5%B9%8C%20%E5%8D%977%E6%9D%A1%E8%A5%BF4%E4%B8%81%E7%9B%AE%20LC%E6%8B%BE%E5%A3%B1%E7%95%AA%E9%A4%A81F" target="_blank" rel="noopener noreferrer" aria-label="和酒専門＠BAR的 Google 地圖">地圖</a><a class="textlink" href="tel:011-552-8989">011-552-8989</a><a class="textlink" href="http://www.susukino.in/atbar/" target="_blank" rel="noopener noreferrer">官網</a><a class="textlink" href="http://www.susukino.in/atbar/sake.htm" target="_blank" rel="noopener noreferrer">酒單</a></div>
+      </article>
+      <article class="spot">
+        <p class="flag shut">週日休，1/10 不開</p>
+        <h3>日本酒 みずとり</h3>
+        <p>南3条西3丁目 プレイタウンふじ井ビル5F。步行 4–5 分。週一–六 18:00–24:00，週日休。</p>
+        <p>有十四代付飲み放題方案，120 分 ¥3,300，需前一天預約。¥6,000–8,000。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%9C%AC%E9%85%92%20%E3%81%BF%E3%81%9A%E3%81%A8%E3%82%8A%20%E6%9C%AD%E5%B9%8C%20%E5%8D%973%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE%20%E3%83%97%E3%83%AC%E3%82%A4%E3%82%BF%E3%82%A6%E3%83%B3%E3%81%B5%E3%81%98%E4%BA%95%E3%83%93%E3%83%AB5F" target="_blank" rel="noopener noreferrer" aria-label="日本酒 みずとり的 Google 地圖">地圖</a><a class="textlink" href="tel:050-5589-6975">050-5589-6975</a><a class="textlink" href="https://tabelog.com/hokkaido/A0101/A010103/1054226/" target="_blank" rel="noopener noreferrer">Tabelog</a></div>
+      </article>
+      <article class="spot">
+        <p class="flag">備案</p>
+        <h3>日本酒バー にゃごりん</h3>
+        <p>南4条西3丁目 第2グリーンビル6F。週日 18:00–22:00。未確認有十四代。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%9C%AC%E9%85%92%E3%83%90%E3%83%BC%20%E3%81%AB%E3%82%83%E3%81%94%E3%82%8A%E3%82%93%20%E6%9C%AD%E5%B9%8C%20%E5%8D%974%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE%20%E7%AC%AC2%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%93%E3%83%AB6F" target="_blank" rel="noopener noreferrer" aria-label="日本酒バー にゃごりん的 Google 地圖">地圖</a><a class="textlink" href="tel:011-513-5299">011-513-5299</a><a class="textlink" href="https://tabelog.com/hokkaido/A0101/A010103/1040079/" target="_blank" rel="noopener noreferrer">Tabelog</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="dining">
+    <h2>比羅夫餐廳</h2>
+    <p>建議 1–2 週前訂，壽司更早。1/14 晚餐排在 Hirafu。</p>
+    <div class="spots two">
+      <article class="spot">
+        <h3>Bang Bang 炭火居酒屋</h3>
+        <p>17:30–23:00。</p>
+        <p><a href="mailto:nisekobangbang@gmail.com">nisekobangbang@gmail.com</a></p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Bang%20Bang%20%E7%82%AD%E7%81%AB%E5%B1%85%E9%85%92%E5%B1%8B%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Bang Bang 炭火居酒屋的 Google 地圖">地圖</a><a class="textlink" href="http://nisekobangbang.com/en/" target="_blank" rel="noopener noreferrer">官網</a></div>
+      </article>
+      <article class="spot">
+        <h3>焼肉ジンギスカン 羊蹄山</h3>
+        <p>16:00–22:00。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%84%BC%E8%82%89%E3%82%B8%E3%83%B3%E3%82%AE%E3%82%B9%E3%82%AB%E3%83%B3%20%E7%BE%8A%E8%B9%84%E5%B1%B1%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="焼肉ジンギスカン 羊蹄山的 Google 地圖">地圖</a><a class="textlink" href="https://niseko-yoteizan.com/en_us/" target="_blank" rel="noopener noreferrer">官網</a></div>
+      </article>
+      <article class="spot">
+        <h3>AFURI（Setsu Niseko）</h3>
+        <p>柚子鹽拉麵。11:00–22:00。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=AFURI%20Setsu%20Niseko" target="_blank" rel="noopener noreferrer" aria-label="AFURI Setsu Niseko的 Google 地圖">地圖</a><a class="textlink" href="https://setsuniseko.com/en/dining/afuri/" target="_blank" rel="noopener noreferrer">官網</a></div>
+      </article>
+      <article class="spot">
+        <h3>The Alpinist（Odin Place 3F）</h3>
+        <p>起司鍋／Raclette。17:30–22:00。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Alpinist%20Odin%20Place%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="The Alpinist的 Google 地圖">地圖</a><a class="textlink" href="https://www.alpinistniseko.com/" target="_blank" rel="noopener noreferrer">官網</a></div>
+      </article>
+      <article class="spot">
+        <h3>The Barn</h3>
+        <p>法式、富良野和牛。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Barn%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="The Barn的 Google 地圖">地圖</a><a class="textlink" href="https://www.nisekobarn.com/" target="_blank" rel="noopener noreferrer">官網</a></div>
+      </article>
+      <article class="spot">
+        <h3>KITCHEN（Chatrium）</h3>
+        <p>omakase ¥16,500／27,500。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=KITCHEN%20Chatrium%20Niseko" target="_blank" rel="noopener noreferrer" aria-label="KITCHEN Chatrium的 Google 地圖">地圖</a><a class="textlink" href="https://www.tablecheck.com/en/shops/kitchen/reserve" target="_blank" rel="noopener noreferrer">訂位</a></div>
+      </article>
+      <article class="spot">
+        <h3>Musu（Odin Place 3F）</h3>
+        <p>酒吧小館。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Musu%20Odin%20Place%20%E3%83%8B%E3%82%BB%E3%82%B3" target="_blank" rel="noopener noreferrer" aria-label="Musu的 Google 地圖">地圖</a><a class="textlink" href="https://www.musuniseko.com/" target="_blank" rel="noopener noreferrer">官網</a></div>
+      </article>
+      <article class="spot">
+        <h3>Sushi Kato INORI（Setsu）</h3>
+        <p>壽司。要盡早訂。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sushi%20Kato%20INORI%20Setsu%20Niseko" target="_blank" rel="noopener noreferrer" aria-label="Sushi Kato INORI的 Google 地圖">地圖</a><a class="textlink" href="https://www.kiniseko.com/concierge/other-services/restaurants-around-ki-niseko" target="_blank" rel="noopener noreferrer">餐廳資訊</a></div>
+      </article>
+      <article class="spot">
+        <h3>Sushi Azabu Niseko</h3>
+        <p>壽司。要盡早訂。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Sushi%20Azabu%20Niseko" target="_blank" rel="noopener noreferrer" aria-label="Sushi Azabu Niseko的 Google 地圖">地圖</a><a class="textlink" href="https://www.kiniseko.com/concierge/other-services/restaurants-around-ki-niseko" target="_blank" rel="noopener noreferrer">餐廳資訊</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="recipes">
+    <h2>三天食譜</h2>
+    <p>別墅三天，4 人份。早餐輪流：牛奶優格吐司奶油；荷包蛋香腸；前晚鍋底煮雜炊／拉麵。</p>
+    <article class="recipe">
+      <h3>Day 1　石狩鍋 + 海鮮丼</h3>
+      <p>石狩鍋：昆布高湯 + 味噌 4 大匙。先煮鮭魚、馬鈴薯、紅蘿蔔，再放高麗菜、豆腐、蔥、菇，最後奶油一小塊，撒鮭魚卵。</p>
+      <p>海鮮丼：醋飯 + 生魚片拼盤、鮭魚卵、扇貝、甜蝦。</p>
+    </article>
+    <article class="recipe">
+      <h3>Day 2　成吉思汗烤羊肉 + 炒烏龍</h3>
+      <p>豆芽、洋蔥、南瓜、青椒鋪底，放醃好的羊肉（松尾ジンギスカン）烤。剩醬炒烏龍。配玉米、蘆筍。</p>
+    </article>
+    <article class="recipe">
+      <h3>Day 3　奶油燉菜 + 蛋包飯</h3>
+      <p>奶油燉菜：雞腿、洋蔥、紅蘿蔔、馬鈴薯炒後加水，煮 15 分。熄火放燉菜塊，加牛奶 200ml。可加花椰菜、扇貝。</p>
+      <p>蛋包飯：雞肉、洋蔥、番茄醬炒飯，包 2 顆蛋的蛋皮。</p>
+    </article>
+    <div id="shopping">
+      <div class="shop-head">
+        <h3>採買清單</h3>
+        <p id="shop-count" aria-live="polite">已勾 0 / 0</p>
+      </div>
+      <p>1/11 先到俱知安的 MaxValu、Coop 或 Lucky。勾選記在這台裝置的瀏覽器，不會上傳。</p>
+      <div class="meter" id="shop-meter" role="progressbar" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0" aria-label="採買進度"><span id="shop-bar"></span></div>
+      <div class="shop">
+        <fieldset><legend>海鮮</legend><label class="check"><input type="checkbox" data-item="seafood-salmon"><span>生鮭魚600g</span></label><label class="check"><input type="checkbox" data-item="seafood-sashimi"><span>生魚片拼盤2盒</span></label><label class="check"><input type="checkbox" data-item="seafood-ikura"><span>鮭魚卵100g</span></label><label class="check"><input type="checkbox" data-item="seafood-scallop"><span>扇貝300g</span></label><label class="check"><input type="checkbox" data-item="seafood-shrimp"><span>甜蝦1盒</span></label></fieldset><fieldset><legend>肉</legend><label class="check"><input type="checkbox" data-item="meat-lamb"><span>醃成吉思汗羊肉1kg</span></label><label class="check"><input type="checkbox" data-item="meat-chicken"><span>雞腿700g</span></label><label class="check"><input type="checkbox" data-item="meat-sausage"><span>香腸2包</span></label><label class="check"><input type="checkbox" data-item="meat-bacon"><span>培根1包</span></label></fieldset><fieldset><legend>蔬菜</legend><label class="check"><input type="checkbox" data-item="veg-potato"><span>馬鈴薯8</span></label><label class="check"><input type="checkbox" data-item="veg-carrot"><span>紅蘿蔔4</span></label><label class="check"><input type="checkbox" data-item="veg-onion"><span>洋蔥5</span></label><label class="check"><input type="checkbox" data-item="veg-cabbage"><span>高麗菜1/2</span></label><label class="check"><input type="checkbox" data-item="veg-sprout"><span>豆芽2包</span></label><label class="check"><input type="checkbox" data-item="veg-pumpkin"><span>南瓜1/4</span></label><label class="check"><input type="checkbox" data-item="veg-pepper"><span>青椒4</span></label><label class="check"><input type="checkbox" data-item="veg-scallion"><span>蔥1把</span></label><label class="check"><input type="checkbox" data-item="veg-mushroom"><span>菇2包</span></label><label class="check"><input type="checkbox" data-item="veg-cauli"><span>花椰菜1</span></label><label class="check"><input type="checkbox" data-item="veg-corn"><span>玉米1罐</span></label></fieldset><fieldset><legend>蛋奶</legend><label class="check"><input type="checkbox" data-item="dairy-egg"><span>蛋20</span></label><label class="check"><input type="checkbox" data-item="dairy-milk"><span>牛奶2L</span></label><label class="check"><input type="checkbox" data-item="dairy-butter"><span>奶油200g</span></label><label class="check"><input type="checkbox" data-item="dairy-yogurt"><span>優格4</span></label><label class="check"><input type="checkbox" data-item="dairy-tofu"><span>豆腐1</span></label></fieldset><fieldset><legend>主食</legend><label class="check"><input type="checkbox" data-item="staple-rice"><span>米3kg</span></label><label class="check"><input type="checkbox" data-item="staple-bread"><span>吐司1條</span></label><label class="check"><input type="checkbox" data-item="staple-udon"><span>烏龍麵4包</span></label></fieldset><fieldset><legend>調味</legend><label class="check"><input type="checkbox" data-item="season-miso"><span>味噌</span></label><label class="check"><input type="checkbox" data-item="season-dashi"><span>昆布/高湯包</span></label><label class="check"><input type="checkbox" data-item="season-soy"><span>醬油</span></label><label class="check"><input type="checkbox" data-item="season-wasabi"><span>山葵</span></label><label class="check"><input type="checkbox" data-item="season-ketchup"><span>番茄醬</span></label><label class="check"><input type="checkbox" data-item="season-vinegar"><span>醋飯調味粉</span></label><label class="check"><input type="checkbox" data-item="season-stew"><span>燉菜塊1盒</span></label><label class="check"><input type="checkbox" data-item="season-salt"><span>鹽胡椒油</span></label></fieldset><fieldset><legend>其他</legend><label class="check"><input type="checkbox" data-item="other-drink"><span>啤酒/清酒</span></label><label class="check"><input type="checkbox" data-item="other-coffee"><span>咖啡</span></label><label class="check"><input type="checkbox" data-item="other-paper"><span>廚房紙巾</span></label><label class="check"><input type="checkbox" data-item="other-bag"><span>保鮮袋</span></label></fieldset>
+      </div>
+      <p style="margin-top:12px"><button type="button" class="btn" id="shop-clear">清除勾選</button></p>
+      <noscript><p>沒有 JavaScript 時，勾選不會被記住。</p></noscript>
+    </div>
+  </section>
+
+  <section class="block" id="yoichi">
+    <h2>余市蒸餾所</h2>
+    <p>1/16 從 Annupuri 過來。1/16 有開。</p>
+    <article class="spot">
+      <h3>余市蒸餾所 Nikka</h3>
+      <p>余市町黒川町7-6。電話 0135-23-3131。</p>
+      <p>9:15–16:15（無預約最後入場 15:30）。免費停車。</p>
+      <p>12–1 月整修期間只開付費「キーモルトセミナー」（¥3,000 現金，約 90 分，駕駛不能參加），可能沒有免費導覽。</p>
+      <p>預約 4 週前開放，1/16 場次約 12/19 開放（推算）。</p>
+      <p>不預約也可進博物館、試飲吧、商店、RITA's KITCHEN（10:00–15:50）。</p>
+      <p>限定 Key Malt 三款 55%。限購官方未公布。駕駛不能試飲。</p>
+      <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BD%99%E5%B8%82%E8%92%B8%E9%A4%BE%E6%89%80%20Nikka%20%E4%BD%99%E5%B8%82%E7%94%BA%E9%BB%92%E5%B7%9D%E7%94%BA7-6" target="_blank" rel="noopener noreferrer" aria-label="余市蒸餾所 Nikka的 Google 地圖">地圖</a><a class="textlink" href="tel:0135-23-3131">0135-23-3131</a><a class="textlink" href="https://distillery.nikka.com/yoichi/reservation" target="_blank" rel="noopener noreferrer">預約</a><a class="textlink" href="https://www.nikka.com/distilleries/yoichi/visit/" target="_blank" rel="noopener noreferrer">參觀資訊</a></div>
+    </article>
+    <article class="spot" style="margin-top:12px">
+      <h3>RITA's KITCHEN</h3>
+      <p>蒸餾所內。10:00–15:50。不預約可進。</p>
+      <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=RITA%27s%20KITCHEN%20%E4%BD%99%E5%B8%82%E8%92%B8%E9%A4%BE%E6%89%80%20%E4%BD%99%E5%B8%82%E7%94%BA%E9%BB%92%E5%B7%9D%E7%94%BA7-6" target="_blank" rel="noopener noreferrer" aria-label="RITA's KITCHEN的 Google 地圖">地圖</a></div>
+    </article>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>路段</th><th>估計</th></tr></thead>
+        <tbody>
+          <tr><td>Annupuri → 余市</td><td>1 小時 15 分–1 小時 30 分</td></tr>
+          <tr><td>余市 → 小樽</td><td>30 分</td></tr>
+          <tr><td>小樽 → 札幌</td><td>40 分</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="spots two">
+      <article class="spot">
+        <h3>小樽運河</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3" target="_blank" rel="noopener noreferrer" aria-label="小樽運河的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>堺町通</h3>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A0%BA%E7%94%BA%E9%80%9A%20%E5%B0%8F%E6%A8%BD" target="_blank" rel="noopener noreferrer" aria-label="堺町通的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>札幌薄野</h3>
+        <p>晚上住宿的區域。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AD%E5%B9%8C%E8%96%84%E9%87%8E" target="_blank" rel="noopener noreferrer" aria-label="札幌薄野的 Google 地圖">地圖</a></div>
+      </article>
+      <article class="spot">
+        <h3>定山溪溫泉</h3>
+        <p>備案：住一晚。</p>
+        <div class="actions"><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%9A%E5%B1%B1%E6%BA%AA%E6%BA%AB%E6%B3%89" target="_blank" rel="noopener noreferrer" aria-label="定山溪溫泉的 Google 地圖">地圖</a></div>
+      </article>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>北海道二世古滑雪行程 · 2027/1/9–1/17 · Grant</p>
+    <p><a href="#top">回到頂部</a></p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var KEY = "niseko-2027-shopping";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("[data-item]"));
+  var countEl = document.getElementById("shop-count");
+  var bar = document.getElementById("shop-bar");
+  var meter = document.getElementById("shop-meter");
+  var saved = {};
+  try {
+    saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {};
+  } catch (e) {
+    saved = {};
+  }
+  if (!saved || typeof saved !== "object") saved = {};
+
+  function persist() {
+    try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+  }
+
+  function paint() {
+    var n = 0;
+    boxes.forEach(function (box) {
+      var on = !!saved[box.getAttribute("data-item")];
+      box.checked = on;
+      var label = box.closest("label");
+      if (label) label.classList.toggle("done", on);
+      if (on) n += 1;
+    });
+    if (countEl) countEl.textContent = "已勾 " + n + " / " + boxes.length;
+    if (bar) bar.style.width = (boxes.length ? (n / boxes.length * 100) : 0) + "%";
+    if (meter) {
+      meter.setAttribute("aria-valuenow", String(n));
+      meter.setAttribute("aria-valuemax", String(boxes.length));
+    }
+  }
+
+  boxes.forEach(function (box) {
+    box.addEventListener("change", function () {
+      saved[box.getAttribute("data-item")] = box.checked;
+      persist();
+      paint();
+    });
+  });
+
+  var clearBtn = document.getElementById("shop-clear");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      saved = {};
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      paint();
+    });
+  }
+  paint();
+
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav a[href^='#']"));
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+  if ("IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) { a.removeAttribute("aria-current"); });
+        var current = byId[en.target.id];
+        if (current) current.setAttribute("aria-current", "true");
+      });
+    }, { rootMargin: "-30% 0px -55% 0px", threshold: 0.01 });
+    Array.prototype.forEach.call(document.querySelectorAll("main section[id]"), function (s) {
+      obs.observe(s);
+    });
+  }
+})();
+</script>
 </body>
 </html>

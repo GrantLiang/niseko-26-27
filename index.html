@@ -269,6 +269,21 @@ th { font-size: 13px; color: var(--muted); font-weight: 700; }
 fieldset .check:last-child { border-bottom: 0; }
 .check input { width: 20px; height: 20px; accent-color: var(--pine); flex: none; }
 .check.done span { color: var(--muted); text-decoration: line-through; }
+.rent {
+  display: inline-block;
+  margin-left: -4px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--ice);
+  color: var(--pine);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1.7;
+}
+.check.done span.rent { color: var(--pine); text-decoration: none; }
+#checklist { border-top: 1px solid #ddd4c6; }
+#checklist .shop-head h2 { margin: 0; }
 .recipe { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; margin: 12px 0; }
 .recipe h3 { font-family: var(--serif); }
 .footer { color: var(--muted); font-size: 14px; padding-top: 28px; }
@@ -309,6 +324,7 @@ fieldset .check:last-child { border-bottom: 0; }
 <nav class="nav" aria-label="頁面章節">
   <div class="nav-inner">
     <a href="#overview">總覽</a>
+    <a href="#checklist">行前</a>
     <a href="#d09">1/9</a>
     <a href="#d10">1/10</a>
     <a href="#d11">1/11</a>
@@ -340,6 +356,51 @@ fieldset .check:last-child { border-bottom: 0; }
       <li><a href="#d16"><span class="d">1/16</span><span class="w">週六</span><span>10:00 前退房。余市、小樽，晚上住札幌薄野。</span></a></li>
       <li><a href="#d17"><span class="d">1/17</span><span class="w">週日</span><span>札幌到 CTS，回台。</span></a></li>
     </ol>
+  </section>
+
+  <section class="block" id="checklist">
+    <div class="shop-head">
+      <h2>行前 Check List</h2>
+      <p id="pack-count" aria-live="polite">已勾 0 / 20</p>
+    </div>
+    <p>勾選記在這台裝置的瀏覽器，不會上傳。</p>
+    <div class="meter" id="pack-meter" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" aria-label="行前清單進度"><span id="pack-bar"></span></div>
+    <div class="shop">
+      <fieldset>
+        <legend>證件與支付</legend>
+        <label class="check"><input type="checkbox" data-pack="flight"><span>機票(來回)</span></label>
+        <label class="check"><input type="checkbox" data-pack="passport"><span>護照</span></label>
+        <label class="check"><input type="checkbox" data-pack="insurance"><span>保險</span></label>
+        <label class="check"><input type="checkbox" data-pack="yen"><span>日幣</span></label>
+        <label class="check"><input type="checkbox" data-pack="ic-pay"><span>西瓜卡 / PASMO / apple pay / google pay</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>衣物</legend>
+        <label class="check"><input type="checkbox" data-pack="base-top"><span>底層排汗衣 x 2 (一件洗一件穿)</span></label>
+        <label class="check"><input type="checkbox" data-pack="mid-layer"><span>中層保暖衣 x 1 (這五天都不會洗)</span></label>
+        <label class="check"><input type="checkbox" data-pack="impact-pants"><span>防摔褲 (看你要不要洗)</span></label>
+        <label class="check"><input type="checkbox" data-pack="base-pants"><span>排汗褲 (選配)</span></label>
+        <label class="check"><input type="checkbox" data-pack="socks"><span>雪襪 x 2 (一件洗一件穿)</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>護具配件</legend>
+        <label class="check"><input type="checkbox" data-pack="knee"><span>護膝</span></label>
+        <label class="check"><input type="checkbox" data-pack="wrist"><span>護腕</span></label>
+        <label class="check"><input type="checkbox" data-pack="goggles"><span>雪鏡</span></label>
+        <label class="check"><input type="checkbox" data-pack="neck"><span>圍脖 or 面罩 (可以當晚洗隔天穿)</span></label>
+        <label class="check"><input type="checkbox" data-pack="gloves"><span>手套&amp;保暖手套</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>可租裝備</legend>
+        <label class="check"><input type="checkbox" data-pack="shell-jacket"><span>外層雪衣</span><span class="rent">可租</span></label>
+        <label class="check"><input type="checkbox" data-pack="shell-pants"><span>外層雪褲</span><span class="rent">可租</span></label>
+        <label class="check"><input type="checkbox" data-pack="helmet"><span>安全帽</span><span class="rent">可租</span></label>
+        <label class="check"><input type="checkbox" data-pack="boots"><span>雪鞋</span><span class="rent">可租</span></label>
+        <label class="check"><input type="checkbox" data-pack="board"><span>雪板</span><span class="rent">可租</span></label>
+      </fieldset>
+    </div>
+    <p style="margin-top:12px"><button type="button" class="btn" id="pack-clear">清除勾選</button></p>
+    <noscript><p>沒有 JavaScript 時，勾選不會被記住。</p></noscript>
   </section>
 
   <section class="day block" id="d09">
@@ -975,6 +1036,59 @@ fieldset .check:last-child { border-bottom: 0; }
       obs.observe(s);
     });
   }
+})();
+(function () {
+  var KEY = "niseko-2027-checklist";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("[data-pack]"));
+  var countEl = document.getElementById("pack-count");
+  var bar = document.getElementById("pack-bar");
+  var meter = document.getElementById("pack-meter");
+  var saved = {};
+  try {
+    saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {};
+  } catch (e) {
+    saved = {};
+  }
+  if (!saved || typeof saved !== "object") saved = {};
+
+  function persist() {
+    try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+  }
+
+  function paint() {
+    var n = 0;
+    boxes.forEach(function (box) {
+      var on = !!saved[box.getAttribute("data-pack")];
+      box.checked = on;
+      var label = box.closest("label");
+      if (label) label.classList.toggle("done", on);
+      if (on) n += 1;
+    });
+    if (countEl) countEl.textContent = "已勾 " + n + " / " + boxes.length;
+    if (bar) bar.style.width = (boxes.length ? (n / boxes.length * 100) : 0) + "%";
+    if (meter) {
+      meter.setAttribute("aria-valuenow", String(n));
+      meter.setAttribute("aria-valuemax", String(boxes.length));
+    }
+  }
+
+  boxes.forEach(function (box) {
+    box.addEventListener("change", function () {
+      saved[box.getAttribute("data-pack")] = box.checked;
+      persist();
+      paint();
+    });
+  });
+
+  var clearBtn = document.getElementById("pack-clear");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      saved = {};
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      paint();
+    });
+  }
+  paint();
 })();
 </script>
 </body>
